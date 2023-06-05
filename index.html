@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="img/Favicon2.png" />
+  <title>CriptoDescrypt</title>
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/estilo.css" />
+  <script src="js/scripts.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+  <script>
+
+    function criptografar() {
+      var texto = document.getElementById("texto").value;
+      var chave = document.getElementById("chave").value;
+      
+      var textoCriptografado = CryptoJS.AES.encrypt(texto, chave).toString();
+      
+      document.getElementById('encryptedText').style.display = 'block';
+      document.getElementById("mensagem").innerHTML = textoCriptografado;
+      document.getElementById("MsgChaveCriptografica").style.display = "Block";
+      document.getElementById("MsgTextoCriptografado").style.display = "Block";
+      document.getElementById("chaveCriptografada").innerHTML = chave;
+      document.getElementById("frmDescripto").style.display = "none";
+      
+      
+         
+      
+    }
+
+    function QuerDescriptografar() {
+      document.getElementById('encryptForm').style.display = 'none';
+      document.getElementById('decryptForm').style.display = 'block';
+      document.getElementById('encryptedText').style.display = 'block';      
+      document.getElementById('btnQrDescript').style.display = 'none';
+      document.getElementById("TextoIntrodutorio").innerHTML = "Copie o texto criptografado e a chave criptográfica para descriptografar";
+      
+    }
+
+    
+    function redirecionar() {
+      var textoCriptografado = document.getElementById("textoCriptografado").value;
+      var chave = document.getElementById("chaveDescriptografar").value;
+      
+      var textoDescriptografado = CryptoJS.AES.decrypt(textoCriptografado, chave).toString(CryptoJS.enc.Utf8);
+      
+      document.getElementById('DescryptedText').style.display = 'block'; 
+      document.getElementById('MsgDescriptografada').style.display = 'block'; 
+      document.getElementById("mensagemDescriptografada").innerHTML = textoDescriptografado;
+    }
+  </script>
+</head>
+
+<body>
+  <div id="register-container">
+    <div id="register-banner">
+      <div id="banner-layer">
+        <h1>Projeto CriptoDescrypt</h1>
+      </div>
+    </div>
+
+    <div id="register-form">
+      <h2>Segurança em Sistemas para Internet</h2>
+      <p id="TextoIntrodutorio">Informe seu texto e a chave criptográfica para prosseguir</p>
+
+      <div id="encryptForm"> 
+        <form>
+          <label for="texto" style="font-weight: bold; font-size: 18px;">Texto</label><br>
+          <input style="border-radius: 5px; height: 35px; padding: 10px; width: 100%;" type="text" id="texto" name="texto" placeholder="Informe um texto qualquer..."><br><br>
+          <label for="chave"style="font-weight: bold; font-size: 18px;">Chave criptográfica</label><br>
+          <input style="border-radius: 5px; height: 35px; padding: 10px; width: 100%;" type="text" id="chave" name="chave" placeholder="Informe uma chave criptográfica..."><br><br>
+          <button class="ToolInputOutputStandard__Button" type="button" onclick="criptografar()">Criptografar</button>
+        </form>
+      </div>
+        <br>
+        
+        <div id="encryptedText" style="display: none;">
+          <h2 id="MsgTextoCriptografado" style="color: brown; display: none;">Texto Criptografado</h2>
+            <p id="mensagem" style="color: blue; font-size: 14px;"></p>
+          <h2 id="MsgChaveCriptografica" style="color: brown; display: none;">Chave Criptográfica</h2>
+            <p id="chaveCriptografada" style="color: blue; font-size: 14px;"></p>        
+          <button type="button" class="btnQuerDescriptografar" id="btnQrDescript" onclick="QuerDescriptografar()">Descriptografar</button>
+        </div>
+
+      <div id="decryptForm" style="display: none;">        
+        <form>
+          <label for="textoCriptografado" style="font-weight: bold; font-size: 18px;">Texto criptografado</label><br>
+          <input style="border-radius: 5px; height: 35px; padding: 10px; width: 100%;" type="text" id="textoCriptografado" name="textoCriptografado" placeholder="Copie e cole o texto criptografado aqui..."><br><br>
+          <label for="chaveDescriptografar" style="font-weight: bold; font-size: 18px;">Chave criptográfica</label><br>
+          <input style="border-radius: 5px; height: 35px; padding: 10px; width: 100%;" type="text" id="chaveDescriptografar" name="chaveDescriptografar" placeholder="Copie e cole a chave criptográfica aqui..."><br><br>
+          <button type="button" class="btnDescriptografar" onclick="redirecionar()">Descriptografar</button>
+        </form>
+        <br>
+        <div id="DescryptedText" style="display: none;">
+          <h2 id="MsgDescriptografada" style="color: brown; display: none;">Texto Descriptografado</h2>            
+            <p id="mensagemDescriptografada" style="color: blue; font-size: 14px;"></p>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
