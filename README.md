@@ -1,4 +1,4 @@
-# <p align=center><img align="center" src="https://i.imgur.com/mJVNDrE.png" height="55" width="60"/> CriptoDescrypt <img align="center" src="https://i.imgur.com/mJVNDrE.png" height="55" width="60"/></p>
+# <p align=center> CriptoDescrypt </p>
 
 <div id="inicio" align=center>
   <a href="#sobre">Sobre o Projeto</a>&nbsp;&nbsp;&nbsp;
