@@ -21,12 +21,12 @@
 <div style="display: inline_block">
 <!-- LOGOS HTML5 | CSS3 | PHP -->   
 <img align="center" src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-devextreme-multi-purpose-controls-html-javascript-3.png" width="300"/>
-<!-- LOGO VISUAL STUDIO CODE -->  
+<!-- LOGO VISUAL STUDIO CODE
 <img align="center" src="https://i.imgur.com/mXXAMPF.png" width="300"/> 
   
-<h2 id="screenshots">Screenshots 📸</h2>
+ <!--<h2 id="screenshots">Screenshots 📸</h2>
 
-  <!--<b><i>EM BREVE...</i></b>-->
+  <!--<b><i>EM BREVE...</i></b>
 
 <img align="center" src="https://i.imgur.com/gVoEz7M.png" width="300"/> 
 <img align="center" src="https://i.imgur.com/aGyJk5w.png" width="300"/> 
@@ -36,8 +36,8 @@
 
 <a href="http://prjcriptodescrypt.rf.gd/?i=1"><b>Teste o CriptoDescrypt</b></a><br>
 <a href="http://prjcriptodescrypt.rf.gd/?i=1"><b>Teste o CriptoDescrypt</b></a><br>
-<a href="http://prjcriptodescrypt.rf.gd/?i=1"><b>Teste o CriptoDescrypt</b></a><br>
+<a href="http://prjcriptodescrypt.rf.gd/?i=1"><b>Teste o CriptoDescrypt</b></a><br>-->
     
-<!-- <h2 id="autores">Autor do Projeto 👨‍💼</h2>
-<a href="https://github.com/AhMoutinho/" title="André Moutinho"><img align="center" src="https://i.imgur.com/VN0Vh9S.png" width="25"/> André Moutinho</a> -->  
+ <h2 id="autores">Autor do Projeto 👨‍💼</h2>
+<a href="https://github.com/AhMoutinho/" title="André Moutinho"><img align="center" src="https://i.imgur.com/VN0Vh9S.png" width="25"/> André Moutinho</a> 
 
